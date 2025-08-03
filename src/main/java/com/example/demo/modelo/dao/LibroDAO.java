@@ -1,5 +1,6 @@
-package com.example.demo.modelo.dao; // Or wherever you standardize your DAOs
+package com.example.demo.modelo.dao;
 
+import com.example.demo.Coordinador;
 import com.example.demo.modelo.conexion.ConexionBD;
 import com.example.demo.modelo.Libro;
 
@@ -12,6 +13,11 @@ import java.util.List;
 
 public class LibroDAO {
     private ConexionBD conexion = new ConexionBD();
+    private Coordinador miCoordinador;
+
+    public void setCoordinador(Coordinador miCoordinador) {
+        this.miCoordinador = miCoordinador;
+    }
 
     public String registrarLibro(Libro libro) {
         String resultado = "";
